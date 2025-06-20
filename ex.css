@@ -1,0 +1,65 @@
+h1 {
+  font-size: 40px;
+  text-align: center;
+  background: linear-gradient(to right, #ff00c3, #08f7f9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+h3 {
+  
+  text-align: center;
+  background: linear-gradient(to right, #2b0823, #08f7f9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.contenedor {
+    background-color: rgb(10, 1, 1);
+   display: flex;
+   flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;}
+
+.calculadora {
+     background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow:  0px 0px 10px #06cef1;
+    padding: 40px;
+    width: 300px;
+}
+
+label {
+    display: block;
+    color: #000000;
+    font-size: 23px;
+}
+
+input {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border-radius: 13px;
+    background-color: #07eeee;
+}
+
+button {
+    width: 100px;
+    padding: 5px;
+    background-color: #00d9ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: linear-gradient(90deg  #08f7f9, #ff00c3);
+    font-size: 13px;
+}
+
+button:hover {
+    transition: 0.4s;
+    background-color: #ff00c3;
+    box-shadow: 0px 0px 10px #000000;
+    color: #000000;
+   
+}
+

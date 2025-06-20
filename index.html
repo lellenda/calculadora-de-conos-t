@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora de conos</title>
+    <link rel="stylesheet" href="ex.css">
+    <style>
+  #resultado {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f1f8ff;
+    border: 2px solid #007acc;
+    color: #004d80;
+    font-weight: bold;
+    border-radius: 8px;
+    font-size: 18px;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  #resultado:hover {
+    transform: scale(1.03);
+  }
+</style>
+</head>
+<body>
+    <h1>CALCULADORA DE GRADOS DE CONOS</h1>
+    <h3>creado por</h3>
+    <h3>Luis EE garcia</h3>
+
+ <div class="contenedor">
+  <form class="calculadora" onsubmit="calcular(event)">
+    <label for="mayor">Diametro Mayor</label>
+    <input type="number" id="mayor" name="mayor" placeholder="Introduce diametro mayor" />
+
+    <label for="menor">Diametro Menor</label>
+    <input type="number" id="menor" name="menor" placeholder="Introduce diametro menor" />
+
+    <label for="longitud">Longitud</label>
+    <input type="number" id="longitud" name="longitud" placeholder="Introduce la Longitud" />
+
+    <button type="submit">Calcular Grados</button>
+    <button type="reset">borrar</button>
+  </form>
+
+  <div class="resultado" id="resultado" style="margin-top: 1em; font-weight: bold;"></div>
+</div>
+
+<script>
+function calcular(event) {
+  event.preventDefault(); 
+
+  //obtener los datos del imput
+  const mayor = parseFloat(document.getElementById('mayor').value);
+  const menor = parseFloat(document.getElementById('menor').value);
+  const longitud = parseFloat(document.getElementById('longitud').value);
+
+  //en caso de no me ter todos los datos
+  if (isNaN(mayor) || isNaN(menor) || isNaN(longitud)) {
+    document.getElementById('resultado').textContent = 'Por favor completa todos los campos correctamente.';
+    return;
+  }
+
+  //formula
+  const grados = ((mayor - menor) / longitud) * 57.2958; // pasar de radianes a grados
+
+  document.getElementById('resultado').textContent = `El ángulo es aproximadamente: ${grados.toFixed(2)}°`;
+}</script>
+</body>
+</html>
