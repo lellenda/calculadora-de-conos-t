@@ -65,8 +65,8 @@ function calcular(event) {
   }
 
   //formula
-  const grados = ((mayor - menor) / longitud) * 57.2958; // pasar de radianes a grados
-
+//  const grados = ((mayor - menor) / longitud) * 57.2958; // pasar de radianes a grados
+  const grados = ((((mayor - menor) / 2) * 57.3) / longitud)
   document.getElementById('resultado').textContent = `El ángulo es aproximadamente: ${grados.toFixed(2)}°`;
 }</script>
 </body>
